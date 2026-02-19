@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Jewellery | Luxury Collection</title>
+    <!-- Luxury Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold: #c5a059;
+            --charcoal: #1a1a1a;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fdfdfd;
+            color: var(--charcoal);
+        }
+
+        /* Navigation */
+        header {
+            padding: 20px 5%;
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            margin-left: 15px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        /* Hero Image Section */
+        .hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                        url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 10px; }
+
+        .hero button {
+            background: var(--gold);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            margin-top: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+
+        /* Product Grid */
+        .products {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            padding: 40px 10%;
+        }
+
+        @media (min-width: 600px) { .products { grid-template-columns: 1fr 1fr; } }
+
+        .product-card { text-align: center; }
+
+        .img-container {
+            width: 100%;
+            height: 300px;
+            background-color: #eee;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-card h3 { font-family: 'Playfair Display', serif; margin-bottom: 5px; }
+        .product-card p { color: var(--gold); font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Nova Jewellery</div>
+        <div class="links">
+            <a href="#">Shop</a>
+            <a href="#">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Elegance for Every Moment</h1>
+            <p>Discover handcrafted masterpieces.</p>
+            <button onclick="alert('Starting Gift Guide...')">Find Perfect Gift</button>
+        </section>
+
+        <section class="products">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1512163143273-bde0e3cc7407?auto=format&fit=crop&w=500&q=80" alt="Pendant">
+                </div>
+                <h3>Sapphire Pendant</h3>
+                <p>$1,200</p>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=500&q=80" alt="Earrings">
+                </div>
+                <h3>Gold Hoop Earrings</h3>
+                <p>$450</p>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&w=500&q=80" alt="Bracelet">
+                </div>
+                <h3>Diamond Tennis Bracelet</h3>
+                <p>$3,500</p>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
